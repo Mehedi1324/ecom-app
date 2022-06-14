@@ -5,7 +5,7 @@
 }
 .trandings {
   display: flex;
-  padding: 0px !important;
+  padding-right: 15px !important;
 }
 .trandings img {
   width: 120px;

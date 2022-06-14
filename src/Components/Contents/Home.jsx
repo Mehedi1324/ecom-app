@@ -3,7 +3,6 @@ import Banner from './Banner';
 import Blog from './Blog';
 import Categories from './Categories';
 import LatestCollections from './LatestCollections';
-import Subscription from './Subscription';
 import Supports from './Supports';
 import TopSellings from './TopSellings';
 import Trendings from './Trendings';
@@ -19,7 +18,6 @@ const Home = () => {
       <TopSellings />
       <Trendings />
       <Blog />
-      <Subscription />
     </div>
   );
 };

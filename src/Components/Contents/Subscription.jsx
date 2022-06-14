@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import '../Stylings/Subscription.css';
 const Subscription = () => {
   return (
@@ -8,7 +9,12 @@ const Subscription = () => {
         Subscribe our newsletter to get latest new about our new product and
         promo campaign.
       </p>
-      <input type="email" button />
+      <InputGroup className="mb-3 w-50 m-auto sub">
+        <FormControl placeholder="email address" />
+        <Button variant="outline-secondary" className="button">
+          Subscribe
+        </Button>
+      </InputGroup>
     </div>
   );
 };

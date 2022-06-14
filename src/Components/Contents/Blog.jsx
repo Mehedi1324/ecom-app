@@ -22,7 +22,7 @@ const Blog = () => {
       </div>
       <div>
         <Row>
-          <Col md={4} sm={12} lg={4} className="col">
+          <Col md={4} sm={12} lg={4} xs={12} className="col">
             <img src="./image/10043.jpg" alt="" />
             <div>
               <Link to={'/'}>Prada Collection For Men 2017</Link>
@@ -35,7 +35,7 @@ const Blog = () => {
               </p>
             </div>
           </Col>
-          <Col md={4} sm={12} lg={4} className="col">
+          <Col md={4} sm={12} lg={4} xs={12} className="col">
             <img src="./image/10044.jpg" alt="" />
             <div>
               <Link to={'/'}>Suspendisse consequat orci</Link>
@@ -48,7 +48,7 @@ const Blog = () => {
               </p>
             </div>
           </Col>
-          <Col md={4} sm={12} lg={4} className="col">
+          <Col md={4} sm={12} lg={4} xs={12} className="col">
             <img src="./image/10045.jpg" alt="" />
             <div>
               <Link to={'/'}></Link>

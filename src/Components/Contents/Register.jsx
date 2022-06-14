@@ -1,6 +1,9 @@
 import React from 'react';
 import '../Stylings/Register.css';
 import { Row, Col } from 'react-bootstrap';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
+import TwitterIcon from '@mui/icons-material/Twitter';
 const Register = () => {
   return (
     <div className="register">
@@ -9,11 +12,24 @@ const Register = () => {
       </div>
 
       <div className="second__container">
-        <div>
-          <button>Sign in with Facebook</button>
-          <button>Sign in with Google</button>
-          <button>Sign in with Twitter</button>
-        </div>
+        <Row>
+          <Col md={4} lg={4} sm={12} className="btn__col">
+            <button className="pop__btn bg-primary">
+              {' '}
+              <FacebookIcon className="fab__icon" /> Sign in with Facebook
+            </button>
+          </Col>
+          <Col md={4} lg={4} sm={12} className="btn__col">
+            <button className="pop__btn bg-danger">
+              <GoogleIcon className="fab__icon" /> Sign in with Google
+            </button>
+          </Col>
+          <Col md={4} lg={4} sm={12} className="btn__col">
+            <button className="pop__btn bg-info">
+              <TwitterIcon className="fab__icon" /> Sign in with Twitter
+            </button>
+          </Col>
+        </Row>
       </div>
       <div className="info">
         {/* Personal Info */}
@@ -83,7 +99,7 @@ const Register = () => {
             </p>
 
             <br />
-            <input type="submit" value="Create Account" />
+            <input type="submit" className="acc__btn" value="Create Account" />
           </div>
         </div>
       </div>
