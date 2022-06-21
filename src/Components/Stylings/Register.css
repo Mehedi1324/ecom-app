@@ -102,13 +102,15 @@ h3 {
 }
 
 .sinfo {
+  margin-top: 15px !important;
   margin-bottom: 15px !important;
   font-size: 16px;
 }
 .sinfo h4 {
   font-size: 16px;
   font-weight: 600 !important;
-  color: rgb(38, 36, 36);
+  color: rgb(106, 104, 104);
+  margin-top: 15px !important;
 }
 .name__col {
   padding: 0px;

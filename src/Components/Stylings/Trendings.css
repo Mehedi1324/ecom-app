@@ -5,6 +5,7 @@
 }
 .trandings {
   display: flex;
+  padding: 0px;
   padding-right: 15px !important;
 }
 .trandings img {
@@ -23,14 +24,11 @@
   color: #222222;
 }
 .margin {
-  border-top: 3px solid black !important;
-  border-radius: 5px;
-  width: 15% !important;
-  margin-left: 15px;
-}
-.tranding_titles {
-  display: flex;
-  align-items: center;
+  border-bottom: 3px solid rgb(41, 239, 226);
+  margin-bottom: 20px;
+  margin-top: -10px !important;
+  width: 20%;
+  border-radius: 50%;
 }
 p {
   font-family: fangsong;
@@ -56,4 +54,9 @@ p {
 }
 .main_col {
   margin-bottom: 40px;
+}
+
+.trandings:hover .trandings img {
+  transform: scale(1.1);
+  padding: 10px;
 }

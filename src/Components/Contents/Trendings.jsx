@@ -6,36 +6,37 @@ const Trendings = () => {
     <div className="trandings__container">
       <Row>
         {/* Column 01 */}
-        <Col className="main_col" lg={4} md={4} sm={12}>
-          <Col>
-            <div className="tranding_titles">
+        <Col className="main_col" lg={4} md={6} sm={12}>
+          <Col lg={12} md={12} sm={12}>
+            <div className="tranding_titles my-4">
               <h2>TOP TRENDING</h2>
-              <span className="margin"></span>
+
+              <p>Top trending in the week</p>
             </div>
-            <p>Top trending in the week</p>
+            <h3 className="margin"></h3>
           </Col>
           <Row>
-            <Col className="trandings">
+            <Col lg={12} md={12} sm={12} className="trandings">
               <img src="./image/10037.jpg" alt="" />
-              <div>
+              <div className="product_details">
                 <h4>Tess cropped stretch-cloque top</h4>
                 <span className="price">$148.00</span>
                 <br />
                 <button className="crt_btn">Add to Cart</button>
               </div>
             </Col>
-            <Col className="trandings">
+            <Col lg={12} md={12} sm={12} className="trandings">
               <img src="./image/10037.jpg" alt="" />
-              <div>
+              <div className="product_details">
                 <h4>Tess cropped stretch-cloque top</h4>
                 <span className="price">$148.00</span>
                 <br />
                 <button className="crt_btn">Add to Cart</button>
               </div>
             </Col>
-            <Col className="trandings">
+            <Col lg={12} md={12} sm={12} className="trandings">
               <img src="./image/10037.jpg" alt="" />
-              <div>
+              <div className="product_details">
                 <h4>Tess cropped stretch-cloque top</h4>
                 <span className="price">$148.00</span>
                 <br />
@@ -46,36 +47,37 @@ const Trendings = () => {
         </Col>
 
         {/* Column 02 */}
-        <Col className="main_col" lg={4} md={4} sm={12}>
-          <Col>
-            <div className="tranding_titles">
+        <Col className="main_col " lg={4} md={6} sm={12}>
+          <Col lg={12} md={12} sm={12}>
+            <div className="tranding_titles my-4">
               <h2>TOP SELLING</h2>
-              <span className="margin"></span>
+
+              <p>Top seller in the week</p>
             </div>
-            <p>Top seller in the week</p>
+            <h3 className="margin"></h3>
           </Col>
           <Row>
-            <Col className="trandings">
-              <img src="./image/10037.jpg" alt="" />
-              <div>
+            <Col lg={12} md={12} sm={12} className="trandings">
+              <img class src="./image/10037.jpg" alt="" />
+              <div className="product_details">
                 <h4>Tess cropped stretch-cloque top</h4>
                 <span className="price">$148.00</span>
                 <br />
                 <button className="crt_btn">Add to Cart</button>
               </div>
             </Col>
-            <Col className="trandings">
+            <Col lg={12} md={12} sm={12} className="trandings">
               <img src="./image/10037.jpg" alt="" />
-              <div>
+              <div className="product_details">
                 <h4>Tess cropped stretch-cloque top</h4>
                 <span className="price">$148.00</span>
                 <br />
                 <button className="crt_btn">Add to Cart</button>
               </div>
             </Col>
-            <Col className="trandings">
+            <Col lg={12} md={12} sm={12} className="trandings">
               <img src="./image/10037.jpg" alt="" />
-              <div>
+              <div className="product_details">
                 <h4>Tess cropped stretch-cloque top</h4>
                 <span className="price">$148.00</span>
                 <br />
@@ -85,16 +87,17 @@ const Trendings = () => {
           </Row>
         </Col>
         {/* Column 03 */}
-        <Col className="main_col" lg={4} md={4} sm={12}>
-          <Col>
-            <div className="tranding_titles">
+        <Col className="main_col ps-4" lg={4} md={12} sm={12}>
+          <Col lg={12} md={12} sm={12}>
+            <div className="tranding_titles my-4">
               <h2>ON-SALE ITEMS</h2>
-              <span className="margin"></span>
+
+              <p>Top seller in the week</p>
             </div>
-            <p>Top seller in the week</p>
+            <h3 className="margin"></h3>
           </Col>
           <Row>
-            <Col className="trandings">
+            <Col lg={12} md={12} sm={12} className="trandings">
               <span className="p">
                 We can't find products matching the selection.
               </span>

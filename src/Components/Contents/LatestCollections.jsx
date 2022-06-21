@@ -16,7 +16,14 @@ const LatestCollections = () => {
       <div className="collections">
         <Row className="rw">
           <Col className="col1" lg={3} md={3} sm={12}>
-            <img src="./image/10005.jpg" alt="add" />{' '}
+            <div className="col1__container">
+              <img className="col1__img" src="./image/10005.jpg" alt="add" />
+              <div className="col1__content">
+                <h4>SMART PHONE </h4>
+                <h2>UP TO 50%</h2>
+                <button>Shop Now</button>
+              </div>
+            </div>
           </Col>
           <Col lg={9} md={9} sm={12}>
             <Row className="row2">
@@ -63,13 +70,32 @@ const LatestCollections = () => {
         </Row>
         <Row className="row3">
           <Col md={4} lg={4} sm={4}>
-            <img src="./image/10023.jpg" alt="macbook" />
+            <div className="col1__container">
+              <img
+                className="col1__img"
+                src="./image/10023.jpg"
+                alt="macbook"
+              />
+              <div className="col1__content laptop">
+                <h4>GET UP TO 50% OFF </h4>
+                <h2>MACBOOK AIR</h2>
+              </div>
+            </div>
           </Col>
-          <Col className="">
-            <span>" logo " We can't find products matching the selection.</span>
+          <Col md={4} lg={4} sm={4} className="">
+            <span style={{ color: 'red', fontSize: '18px' }}>
+              "logo" We can't find products matching the selection.
+            </span>
           </Col>
-          <Col>
-            <img src="./image/10024.jpg" alt="" />
+          <Col md={4} lg={4} sm={4}>
+            <div className="col1__container">
+              <img className="col1__img" src="./image/10024.jpg" alt="" />
+              <div className="col1__content smrt_pn">
+                <h4>SMART PHONE </h4>
+                <h2>UP TO 50%</h2>
+                <button>Shop Now</button>
+              </div>
+            </div>
           </Col>
         </Row>
       </div>

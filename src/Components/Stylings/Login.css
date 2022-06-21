@@ -1,0 +1,47 @@
+.log__container {
+  width: 80%;
+  margin: auto;
+}
+.input {
+  width: 80%;
+  margin-top: 10px;
+  height: 40px;
+  background-color: #f3f1f1;
+  border: 1px solid white;
+}
+.login__btn {
+  border-radius: 20px;
+  padding: 5px 45px 5px 45px;
+  background-color: black;
+  color: white;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: system-ui;
+}
+.login__btn:hover {
+  background-color: #56cfe1;
+  border: 2px solid white;
+}
+.btn2 {
+  background-color: #56cfe1;
+  border: 2px solid white;
+}
+.btn2:hover {
+  background-color: black;
+  color: white;
+}
+
+.forgot__btn {
+  border: none;
+  background: none;
+  margin-top: 21px;
+  text-decoration: underline;
+}
+.forgot__btn:hover {
+  color: blue;
+}
+.social__auth {
+  margin: 0px;
+  text-align: left;
+}

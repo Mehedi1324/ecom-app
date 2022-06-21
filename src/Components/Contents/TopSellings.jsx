@@ -58,16 +58,38 @@ const TopSellings = () => {
             </Row>
           </Col>
           <Col className="col1" lg={3} md={3} sm={12}>
-            <img src="./image/10029.jpg" alt="add" />{' '}
+            <div className="col1__container">
+              <img className="col1__img" src="./image/10029.jpg" alt="add" />
+
+              <div className="col1__content laptop__add">
+                <h4>THE NEW LAPTOP </h4>
+                <h2>NEW VISION</h2>
+                <button>Shop Now</button>
+              </div>
+            </div>
           </Col>
         </Row>
       </div>
       <Row className="addRow">
         <Col md={6} lg={6} sm={12}>
-          <img src="./image/10035.jpg" alt="add" />
+          <div className="col1__container">
+            <img className="col1__img" src="./image/10035.jpg" alt="add" />
+
+            <div className="col1__content watch">
+              <h4>THE ULTIMATE </h4>
+              <h2>FITNESS WATCH</h2>
+            </div>
+          </div>
         </Col>
         <Col md={6} lg={6} sm={12}>
-          <img src="./image/10036.jpg" alt="add" />
+          <div className="col1__container">
+            <img className="col1__img" src="./image/10036.jpg" alt="add" />
+
+            <div className="col1__content headphone">
+              <h4>SUMMER SELL </h4>
+              <h2>UP TO 70%</h2>
+            </div>
+          </div>
         </Col>
       </Row>
     </div>

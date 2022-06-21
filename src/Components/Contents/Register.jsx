@@ -3,8 +3,18 @@ import '../Stylings/Register.css';
 import { Row, Col } from 'react-bootstrap';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { useAuth } from '../../Share_Comp/Hooks/AuthProvider';
 const Register = () => {
+  const {
+    handleGoogleSignIn,
+    handleFacebookSignIn,
+    f_nameRef,
+    l_nameRef,
+    emailRef,
+    passwordRef,
+    repasswordRef,
+    handleSignUp,
+  } = useAuth();
   return (
     <div className="register">
       <div className="add__banner">
@@ -14,94 +24,101 @@ const Register = () => {
       <div className="second__container">
         <Row>
           <Col md={4} lg={4} sm={12} className="btn__col">
-            <button className="pop__btn bg-primary">
+            <button
+              onClick={handleFacebookSignIn}
+              className="pop__btn bg-primary"
+            >
               {' '}
               <FacebookIcon className="fab__icon" /> Sign in with Facebook
             </button>
           </Col>
           <Col md={4} lg={4} sm={12} className="btn__col">
-            <button className="pop__btn bg-danger">
+            <button onClick={handleGoogleSignIn} className="pop__btn bg-danger">
               <GoogleIcon className="fab__icon" /> Sign in with Google
-            </button>
-          </Col>
-          <Col md={4} lg={4} sm={12} className="btn__col">
-            <button className="pop__btn bg-info">
-              <TwitterIcon className="fab__icon" /> Sign in with Twitter
             </button>
           </Col>
         </Row>
       </div>
       <div className="info">
         {/* Personal Info */}
-        <div className="personal__info">
-          <h3>PERSONAL INFORMATION</h3>
-          <Row className="name__input">
-            <Col className="name__col" md={6} lg={6} sm={12}>
-              <p>
-                <input
-                  className="name__inputBox"
-                  type="text"
-                  placeholder="First name"
-                />{' '}
-                <br />{' '}
-                <span className="name_warn">* this is required field</span>
-              </p>
-            </Col>
-            <Col className="name__col" md={6} lg={6} sm={12}>
-              <p>
-                <input
-                  className="name__inputBox"
-                  type="text"
-                  placeholder="Second name"
-                />{' '}
-                <br />
-                <span className="name_warn">* this is required field</span>
-              </p>
-            </Col>
-          </Row>
-        </div>
-
-        {/* _____________ */}
-        <div className="signin__info">
-          <h3 className="mb-3">SIGN-IN INFORMATION</h3>
-          <div className="signin__input">
-            <p className="sinfo">
-              <h4>
-                Email <span style={{ color: 'red' }}>*</span> :
-              </h4>
-              <input type="email" />
-              <br />
-            </p>
-            <p className="sinfo">
-              <h4>
-                Password <span style={{ color: 'red' }}>*</span>:
-              </h4>
-              <input type="password" />
-              <br />
-            </p>
-            <p className="sinfo">
-              <h4>
-                Confirm Password <span style={{ color: 'red' }}>*</span>:
-              </h4>
-              <input type="password" />
-              <br />
-            </p>
-            <p className="sinfo">
-              <input
-                type="checkbox"
-                name="Check"
-                style={{ padding: '20px' }}
-                id=""
-                className="me-2 check__box"
-              />
-              By using this form you agree with the storage and handling of your
-              data by this website.
-            </p>
-
-            <br />
-            <input type="submit" className="acc__btn" value="Create Account" />
+        <form onSubmit={handleSignUp}>
+          <div className="personal__info mb-3">
+            <h3>PERSONAL INFORMATION</h3>
+            <Row className="name__input">
+              <Col className="name__col" md={6} lg={6} sm={12}>
+                <p>
+                  <input
+                    required
+                    className="name__inputBox mt-3"
+                    type="text"
+                    placeholder="First name"
+                    ref={f_nameRef}
+                  />{' '}
+                </p>
+              </Col>
+              <Col className="name__col" md={6} lg={6} sm={12}>
+                <p>
+                  <input
+                    required
+                    className="name__inputBox mt-3"
+                    type="text"
+                    placeholder="Second name"
+                    ref={l_nameRef}
+                  />{' '}
+                </p>
+              </Col>
+            </Row>
           </div>
-        </div>
+
+          {/* _____________ */}
+
+          <div className="signin__info">
+            <h3 className="mb-3">SIGN-IN INFORMATION</h3>
+            <div className="signin__input">
+              <span className="sinfo ">
+                <h4>
+                  Email <span style={{ color: 'red' }}>*</span> :
+                </h4>
+                <input required type="email" ref={emailRef} />
+                <br />
+              </span>
+              <span className="sinfo">
+                <h4>
+                  Password <span style={{ color: 'red' }}>*</span>:
+                </h4>
+                <input required type="password" ref={passwordRef} />
+                <br />
+              </span>
+              <span className="sinfo">
+                <h4>
+                  Confirm Password <span style={{ color: 'red' }}>*</span>:
+                </h4>
+                <input required type="password" ref={repasswordRef} />
+                <br />
+              </span>
+              <p className="sinfo">
+                <input
+                  required
+                  type="checkbox"
+                  name="Check"
+                  style={{ padding: '20px' }}
+                  id=""
+                  className="me-2 check__box"
+                />
+                By using this form you agree with the storage and handling of
+                your data by this website.
+              </p>
+
+              <br />
+              <input
+                required
+                type="submit"
+                className="acc__btn"
+                value="Create Account"
+              />
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );

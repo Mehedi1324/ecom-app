@@ -1,0 +1,147 @@
+header {
+  z-index: 888888888880 !important;
+}
+
+.cnt__info {
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+.d-flex {
+  display: flex !important;
+  align-items: center;
+}
+.add_dit {
+  color: white;
+  font-family: inherit;
+}
+.addvertisign {
+  margin-top: 9px;
+}
+.cnt__icon {
+  margin-right: 8px;
+  font-size: 14px !important;
+}
+.log__icon {
+  font-size: 22px !important;
+  padding: 1px !important;
+  color: white;
+}
+
+.log__icon:hover {
+  cursor: pointer;
+}
+
+svg {
+  vertical-align: middle;
+  width: auto;
+}
+.cart__lnt {
+  color: white;
+  font-weight: 600;
+  margin-left: 3px;
+  border-radius: 50%;
+}
+a {
+  margin: 0px !important;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.732);
+  /* background-color: rgb(207, 230, 239); */
+  box-shadow: 0px 4px 11px -5px black;
+  color: white;
+}
+.navbar.active {
+  position: fixed;
+  top: 0;
+  z-index: 1111;
+  width: 100%;
+}
+.search__icon {
+  width: auto;
+  color: black !important;
+}
+.search {
+  width: 30%;
+  align-items: center;
+}
+.search__box {
+  width: 100%;
+  margin-right: -28px;
+  height: 35px;
+  padding-right: 40px;
+  border-radius: 30px;
+  padding-left: 10px;
+}
+
+.nav__logo {
+  width: 150px !important;
+}
+.drop__container {
+  display: inline;
+  position: relative;
+  padding: 2px;
+}
+.drop__content {
+  position: absolute;
+  top: 30px;
+  right: -97%;
+  box-shadow: -5px 8px 6px -7px #000000;
+  display: none;
+  padding-top: 14px;
+  padding-bottom: 50px;
+  min-width: 100px;
+  width: 180px;
+  height: 280px !important;
+  height: auto;
+  border-radius: 2px;
+  background-color: #444444;
+}
+.drop__container:hover .drop__content {
+  display: block;
+}
+
+.drop__content a {
+  color: rgb(205, 205, 205) !important;
+  font-size: 16px;
+
+  text-shadow: 0px 1px 3px black;
+}
+.drop__content a:hover {
+  color: white !important;
+
+  font-size: 18px;
+  text-shadow: 0px 1px 3px black;
+}
+.dp {
+  width: 60px;
+  border-radius: 50%;
+  margin-bottom: 0px;
+}
+.nav__list {
+  list-style: none;
+  text-align: center;
+
+  margin-top: 10px;
+  padding: 0;
+  line-height: 5px;
+}
+.nav__list li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.nav__list li:hover {
+  /* background-color: #5f5d5d; */
+  margin-bottom: 10px;
+}
+.profile {
+  border-bottom: 1px solid gray;
+}
+.outlet_btn {
+  border-radius: 20px !important;
+}

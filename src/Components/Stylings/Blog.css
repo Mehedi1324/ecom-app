@@ -11,3 +11,6 @@ svg {
 .col {
   margin-bottom: 80px;
 }
+.col__cont {
+  width: 95%;
+}

@@ -8,8 +8,8 @@
 }
 p {
   color: #575757;
-  font-family: inherit;
-  font-style: normal;
+  font-family: system-ui !important;
+  font-style: normal !important;
 }
 h1 {
   font-weight: 700;
