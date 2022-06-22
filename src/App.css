@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+a:hover {
+  color: blue !important;
+}
 p {
   color: #575757;
   font-family: system-ui !important;

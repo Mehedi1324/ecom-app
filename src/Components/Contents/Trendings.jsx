@@ -1,7 +1,24 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import '../Stylings/Trendings.css';
+import Ts from './Ts';
+import Tt from './Tt';
 const Trendings = () => {
+  const [topTrending, setTopTrending] = useState([]);
+  const [topSelling, setTopSelling] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:1010/trending')
+      .then((res) => res.json())
+      .then((data) => setTopTrending(data));
+  }, []);
+  useEffect(() => {
+    fetch('http://localhost:1010/top_selling')
+      .then((res) => res.json())
+      .then((data) => setTopSelling(data));
+  }, []);
+
   return (
     <div className="trandings__container">
       <Row>
@@ -16,33 +33,9 @@ const Trendings = () => {
             <h3 className="margin"></h3>
           </Col>
           <Row>
-            <Col lg={12} md={12} sm={12} className="trandings">
-              <img src="./image/10037.jpg" alt="" />
-              <div className="product_details">
-                <h4>Tess cropped stretch-cloque top</h4>
-                <span className="price">$148.00</span>
-                <br />
-                <button className="crt_btn">Add to Cart</button>
-              </div>
-            </Col>
-            <Col lg={12} md={12} sm={12} className="trandings">
-              <img src="./image/10037.jpg" alt="" />
-              <div className="product_details">
-                <h4>Tess cropped stretch-cloque top</h4>
-                <span className="price">$148.00</span>
-                <br />
-                <button className="crt_btn">Add to Cart</button>
-              </div>
-            </Col>
-            <Col lg={12} md={12} sm={12} className="trandings">
-              <img src="./image/10037.jpg" alt="" />
-              <div className="product_details">
-                <h4>Tess cropped stretch-cloque top</h4>
-                <span className="price">$148.00</span>
-                <br />
-                <button className="crt_btn">Add to Cart</button>
-              </div>
-            </Col>
+            {topTrending.map((trending) => (
+              <Tt trending={trending} key={trending.name} />
+            ))}
           </Row>
         </Col>
 
@@ -57,33 +50,9 @@ const Trendings = () => {
             <h3 className="margin"></h3>
           </Col>
           <Row>
-            <Col lg={12} md={12} sm={12} className="trandings">
-              <img class src="./image/10037.jpg" alt="" />
-              <div className="product_details">
-                <h4>Tess cropped stretch-cloque top</h4>
-                <span className="price">$148.00</span>
-                <br />
-                <button className="crt_btn">Add to Cart</button>
-              </div>
-            </Col>
-            <Col lg={12} md={12} sm={12} className="trandings">
-              <img src="./image/10037.jpg" alt="" />
-              <div className="product_details">
-                <h4>Tess cropped stretch-cloque top</h4>
-                <span className="price">$148.00</span>
-                <br />
-                <button className="crt_btn">Add to Cart</button>
-              </div>
-            </Col>
-            <Col lg={12} md={12} sm={12} className="trandings">
-              <img src="./image/10037.jpg" alt="" />
-              <div className="product_details">
-                <h4>Tess cropped stretch-cloque top</h4>
-                <span className="price">$148.00</span>
-                <br />
-                <button className="crt_btn">Add to Cart</button>
-              </div>
-            </Col>
+            {topSelling.map((selling) => (
+              <Ts selling={selling} key={selling.name} />
+            ))}
           </Row>
         </Col>
         {/* Column 03 */}

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import '../Stylings/LatestCollections.css';
+import MostSelling from './MostSelling';
+
 const TopSellings = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:1010/most_selling')
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
   return (
     <div className="collection__container">
       <div>
@@ -16,47 +24,15 @@ const TopSellings = () => {
       <div className="collections">
         <Row className="rw">
           <Col lg={9} md={9} sm={12}>
-            <Row className="row2">
-              <Col className="r2col" md={4} lg={4} sm={6}>
-                <img src="./image/10010.jpg" alt="ipad" />
-                <Link to="/">iPad Air</Link>
-                <br />
-                <span className="price">$199.00</span>
-              </Col>
-              <Col className="r2col" md={4} lg={4} sm={6}>
-                <img src="./image/10011.jpg" alt="phone" />
-                <Link to="/">iPad Air</Link>
-                <br />
-                <span className="price">$199.00</span>
-              </Col>
-              <Col className="r2col" md={4} lg={4} sm={6}>
-                <img src="./image/10006.png" alt="watch" />
-                <Link to="/">iPad Air</Link>
-                <br />
-                <span className="price">$199.00</span>
-              </Col>
-
-              <Col className="r2col" md={4} lg={4} sm={6}>
-                <img src="./image/10008.jpg" alt="mphone" />
-                <Link to="/">iPad Air</Link>
-                <br />
-                <span className="price">$199.00</span>
-              </Col>
-              <Col className="r2col" md={4} lg={4} sm={6}>
-                <img src="./image/10013.jpg" alt="acc" />
-                <Link to="/">iPad Air</Link>
-                <br />
-                <span className="price">$199.00</span>
-              </Col>
-
-              <Col className="r2col" md={4} lg={4} sm={6}>
-                <img src="./image/lap2.jpg" alt="laptop" />
-                <Link to="/">iPad Air</Link>
-                <br />
-                <span className="price">$199.00</span>
-              </Col>
+            <Row className="row2 mt-4">
+              {products.map((product) => (
+                <MostSelling product={product} key={product.name} />
+              ))}
             </Row>
           </Col>
+
+          {/* ___________________________________________________________ */}
+
           <Col className="col1" lg={3} md={3} sm={12}>
             <div className="col1__container">
               <img className="col1__img" src="./image/10029.jpg" alt="add" />

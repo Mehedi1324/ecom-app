@@ -7,6 +7,8 @@ import {
   FaPhoneAlt,
   FaSearch,
   FaShoppingCart,
+  FaSignInAlt,
+  FaSignOutAlt,
   FaUser,
 } from 'react-icons/fa';
 import { useState } from 'react';
@@ -96,14 +98,16 @@ const Header = () => {
                     <br />
                     <li>
                       {!user.email ? (
-                        <Link to="/login">Sign In</Link>
+                        <Link to="/login">
+                          Sign In <FaSignInAlt />
+                        </Link>
                       ) : (
                         <Button
                           className="outlet_btn"
                           variant="outline-info"
                           onClick={handleLogout}
                         >
-                          Sign Out
+                          Sign Out <FaSignOutAlt />
                         </Button>
                       )}
                     </li>
