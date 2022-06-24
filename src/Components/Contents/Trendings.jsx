@@ -33,8 +33,8 @@ const Trendings = () => {
             <h3 className="margin"></h3>
           </Col>
           <Row>
-            {topTrending.map((trending) => (
-              <Tt trending={trending} key={trending.name} />
+            {topTrending.map((product) => (
+              <Tt product={product} key={product.name} />
             ))}
           </Row>
         </Col>
@@ -50,8 +50,8 @@ const Trendings = () => {
             <h3 className="margin"></h3>
           </Col>
           <Row>
-            {topSelling.map((selling) => (
-              <Ts selling={selling} key={selling.name} />
+            {topSelling.map((product) => (
+              <Ts product={product} key={product.name} />
             ))}
           </Row>
         </Col>

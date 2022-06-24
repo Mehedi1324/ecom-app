@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../Stylings/Cart.css';
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import RemoveIcon from '@mui/icons-material/Remove';
-import AddIcon from '@mui/icons-material/Add';
-import DeleteIcon from '@mui/icons-material/Delete';
+
+import { useEffect } from 'react';
+import CardProduct from './CardProduct';
 const Cart = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:1010/card')
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
   return (
     <div>
       <div className="add__banner">
@@ -19,128 +25,9 @@ const Cart = () => {
             <p className="pro__margin"></p>
 
             <Scrollbars style={{ height: 600 }} className="scroll">
-              <div className="cart__product py-4">
-                <div className="cart__details">
-                  <div>
-                    <img className="cart__img" src="./image/10037.jpg" alt="" />
-                  </div>
-                  <div>
-                    <h5>Name of product</h5>
-                    <p>color: Red/Blue</p>
-                    <p style={{ color: 'red' }}>$120</p>
-                  </div>
-                </div>
-
-                <div className="quantity">
-                  <AddIcon />
-                  <input type="text" placeholder="10" />
-                  <RemoveIcon />
-                </div>
-                <div className="me-3">
-                  <h5>
-                    {' '}
-                    <DeleteIcon />
-                  </h5>
-                </div>
-              </div>
-              {/* First Product ends*/}
-
-              <div className="cart__product py-4">
-                <div className="cart__details">
-                  <div>
-                    <img className="cart__img" src="./image/10037.jpg" alt="" />
-                  </div>
-                  <div>
-                    <h5>Name of product</h5>
-                    <p>color: Red/Blue</p>
-                    <p style={{ color: 'red' }}>$120</p>
-                  </div>
-                </div>
-
-                <div className="quantity">
-                  <AddIcon />
-                  <input type="text" placeholder="10" />
-                  <RemoveIcon />
-                </div>
-                <div className="me-3">
-                  <h5>
-                    {' '}
-                    <DeleteIcon />
-                  </h5>
-                </div>
-              </div>
-              <div className="cart__product py-4">
-                <div className="cart__details">
-                  <div>
-                    <img className="cart__img" src="./image/10037.jpg" alt="" />
-                  </div>
-                  <div>
-                    <h5>Name of product</h5>
-                    <p>color: Red/Blue</p>
-                    <p style={{ color: 'red' }}>$120</p>
-                  </div>
-                </div>
-
-                <div className="quantity">
-                  <AddIcon />
-                  <input type="text" placeholder="10" />
-                  <RemoveIcon />
-                </div>
-                <div className="me-3">
-                  <h5>
-                    {' '}
-                    <DeleteIcon />
-                  </h5>
-                </div>
-              </div>
-              <div className="cart__product py-4">
-                <div className="cart__details">
-                  <div>
-                    <img className="cart__img" src="./image/10037.jpg" alt="" />
-                  </div>
-                  <div>
-                    <h5>Name of product</h5>
-                    <p>color: Red/Blue</p>
-                    <p style={{ color: 'red' }}>$120</p>
-                  </div>
-                </div>
-
-                <div className="quantity">
-                  <AddIcon />
-                  <input type="text" placeholder="10" />
-                  <RemoveIcon />
-                </div>
-                <div className="me-3">
-                  <h5>
-                    {' '}
-                    <DeleteIcon />
-                  </h5>
-                </div>
-              </div>
-              <div className="cart__product py-4">
-                <div className="cart__details">
-                  <div>
-                    <img className="cart__img" src="./image/10037.jpg" alt="" />
-                  </div>
-                  <div>
-                    <h5>Name of product</h5>
-                    <p>color: Red/Blue</p>
-                    <p style={{ color: 'red' }}>$120</p>
-                  </div>
-                </div>
-
-                <div className="quantity">
-                  <AddIcon />
-                  <input type="text" placeholder="10" />
-                  <RemoveIcon />
-                </div>
-                <div className="me-3">
-                  <h5>
-                    {' '}
-                    <DeleteIcon />
-                  </h5>
-                </div>
-              </div>
+              {products.map((product) => (
+                <CardProduct product={product} key={product._id} />
+              ))}
             </Scrollbars>
           </Col>
 
