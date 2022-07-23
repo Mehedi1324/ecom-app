@@ -10,7 +10,7 @@ const Categories = () => {
             <img className="menu__img" src="./image/10001.jpg" alt="" />
 
             <div className="menu__content">
-              <button>Laptop</button>
+              <button className="btn1">Laptop</button>
             </div>
           </div>
         </Col>
@@ -22,7 +22,7 @@ const Categories = () => {
                 <img className="menu__img" src="./image/10002.jpg" alt="" />
 
                 <div className="menu__content">
-                  <button>Accessories</button>
+                  <button className="btn1">Accessories</button>
                 </div>
               </div>
             </Col>
@@ -31,7 +31,7 @@ const Categories = () => {
                 <img className="menu__img" src="./image/10003.jpg" alt="" />
 
                 <div className="menu__content">
-                  <button>iWatch</button>
+                  <button className="btn1">iWatch</button>
                 </div>
               </div>
             </Col>
@@ -41,7 +41,7 @@ const Categories = () => {
               <img className="menu__img " src="./image/10004.jpg" alt="" />
 
               <div className="menu__content">
-                <button>Camera</button>
+                <button className="btn1">Camera</button>
               </div>
             </div>
           </Col>

@@ -2,11 +2,10 @@ import React from 'react';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useState } from 'react';
+
 const CardProduct = (props) => {
   const { name, img, price, rating } = props.product;
 
-  console.log(props);
   return (
     <div className="cart__product py-4">
       <div className="cart__details">

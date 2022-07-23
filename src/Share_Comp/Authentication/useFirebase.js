@@ -43,7 +43,7 @@ const useFirebase = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const googleUser = result.user;
-        console.log(googleUser);
+
         setUser(googleUser);
       })
       .catch((error) => {
@@ -56,7 +56,7 @@ const useFirebase = () => {
     signInWithPopup(auth, facebookProvider)
       .then((result) => {
         const facebookUser = result.user;
-        console.log(facebookUser);
+
         setUser(facebookUser);
       })
       .catch((error) => {
@@ -89,7 +89,6 @@ const useFirebase = () => {
       .then((result) => {
         const signedUpUser = result.user;
         setUser(signedUpUser);
-        console.log(signedUpUser);
         displayName();
         setError('');
         emailVerification();
@@ -111,7 +110,6 @@ const useFirebase = () => {
       .then((result) => {
         const signInInfo = result.user;
         setUser(signInInfo);
-        console.log(signInInfo);
         setError('');
       })
       .catch((error) => {
@@ -125,7 +123,6 @@ const useFirebase = () => {
     sendEmailVerification(auth, emailRef.current.value).then((result) => {
       // Email verification sent!
       // ...
-      console.log(result);
     });
   };
 

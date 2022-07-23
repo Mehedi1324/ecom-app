@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../Stylings/Cart.css';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
-import { useEffect } from 'react';
 import CardProduct from './CardProduct';
+import AddedProduct from '../../Share_Comp/AddToCart/AddedProduct';
 const Cart = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch('http://localhost:1010/card')
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+  const { products } = AddedProduct();
+
   return (
     <div>
       <div className="add__banner">

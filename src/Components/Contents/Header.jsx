@@ -14,11 +14,12 @@ import {
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../Share_Comp/Hooks/AuthProvider';
-import { buttonBaseClasses } from '@mui/material';
+import AddedProduct from '../../Share_Comp/AddToCart/AddedProduct';
 
 const Header = () => {
   const { handleLogout, user } = useAuth();
   const [navbar, setNavbar] = useState(false);
+  const { products } = AddedProduct();
   const stickyNav = () => {
     if (window.scrollY >= 90) {
       setNavbar(true);
@@ -120,7 +121,7 @@ const Header = () => {
             <Link to="/cart">
               <FaShoppingCart className="log__icon" />
             </Link>
-            <p className="cart__lnt me-3"> 10</p>
+            <p className="cart__lnt me-3"> {products.length}</p>
           </div>
         </nav>
       </div>
