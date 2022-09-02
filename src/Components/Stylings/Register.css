@@ -1,0 +1,121 @@
+.add__banner {
+  background-image: url('../../../public/image/shop-category.jpg');
+  background-size: cover;
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 147px;
+  background-blend-mode: darken;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add__banner h2 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: cursive;
+}
+.pop__btn {
+  color: white;
+
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 770px) {
+  .pop__btn {
+    display: flex !important;
+    /* color: black; */
+    font-size: 14px !important;
+    justify-content: center;
+  }
+  .second__container button {
+    width: 99% !important;
+  }
+  .btn__col {
+    padding: 0px !important;
+  }
+}
+
+.fab__icon {
+  font-size: 25px !important;
+  text-align: left !important;
+  margin-right: 10px;
+}
+.second__container {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.btn__col.col-lg-4.col-md-4.col-sm-12 {
+  text-align: left;
+  padding: 0px;
+}
+.second__container button {
+  margin: 5px 3px 6px 7px;
+  border-radius: 5px;
+  width: 220px;
+  border: 1px solid rgb(205, 204, 204);
+  padding: 5px;
+  transition: 500ms all;
+}
+.second__container button:hover {
+  box-shadow: 0px 8px 10px -5px black;
+  transform: scale(1.04);
+}
+.info {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 8%;
+}
+.info input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3f1f1;
+  border: 1px solid white;
+}
+.name_warn {
+  color: red;
+  margin-top: 10px !important;
+}
+
+.check__box {
+  width: 3% !important;
+}
+
+.presonal__info {
+  width: 100%;
+}
+.acc__btn {
+  background-color: rgb(117, 187, 187) !important;
+  color: white !important;
+  font-size: 18px;
+  font-weight: 600;
+}
+h3 {
+  font-weight: 700 !important;
+  margin-top: 15px !important;
+}
+.acc__btn:hover {
+  background-color: royalblue !important;
+  transition: 800ms;
+}
+
+.sinfo {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+  font-size: 16px;
+}
+.sinfo h4 {
+  font-size: 16px;
+  font-weight: 600 !important;
+  color: rgb(106, 104, 104);
+  margin-top: 15px !important;
+}
+.name__col {
+  padding: 0px;
+}

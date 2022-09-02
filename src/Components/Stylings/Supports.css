@@ -1,0 +1,18 @@
+.support__container {
+  width: 80%;
+  margin: auto;
+  margin-top: 45px;
+  overflow: hidden;
+}
+.services {
+  display: flex;
+  margin-bottom: 27px;
+}
+.services h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222222;
+}
+.icon {
+  margin-right: 27px;
+}

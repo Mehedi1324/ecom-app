@@ -1,0 +1,110 @@
+.collection__container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.collection__container p {
+  text-align: center;
+  font-family: fangsong;
+  font-style: italic;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title h2 {
+  font-weight: 700;
+  font-size: 25px;
+  color: #222222;
+}
+.title span {
+  border-top: 4px solid black;
+  border-radius: 5px;
+  width: 10%;
+}
+.collections {
+  margin: auto !important;
+}
+.col1 img {
+  width: 100%;
+}
+.row2 {
+  display: flex !important;
+  justify-content: space-evenly;
+  margin-left: 5% !important;
+}
+a {
+  color: black !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.price {
+  color: #747371;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.r2col {
+  margin-bottom: 80px;
+}
+.row2 img {
+  width: 100%;
+}
+.row3 {
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
+}
+.addRow {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+.addRow img {
+  width: 100%;
+}
+
+/* --------- Adds and Hover effects --------------------------- */
+
+.col1__container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.col1__content {
+  position: absolute;
+  bottom: 15%;
+  text-align: center;
+}
+.smrt_pn {
+  bottom: 7%;
+}
+.laptop {
+  top: 10px;
+  left: 10px;
+}
+.laptop__add {
+  bottom: 10%;
+}
+.watch {
+  top: 37%;
+  left: 10%;
+  text-align: left;
+  color: white;
+}
+.headphone {
+  top: 37%;
+  left: 10%;
+  text-align: left;
+}
+.col1__img {
+  transition: transform 500ms;
+}
+.col1__container:hover .col1__img {
+  transform: scale(1.1);
+}
+.col1 {
+  padding: 0px !important;
+}

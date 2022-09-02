@@ -1,0 +1,21 @@
+.sub__container {
+  width: 100%;
+  text-align: center;
+  background-color: #f6f6f8;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.sub {
+  box-shadow: 0px 7px 18px -7px black;
+}
+
+.button {
+  color: white !important;
+  background-color: rgb(117, 187, 187) !important;
+  font-weight: 600 !important;
+  border: 0px solid white !important;
+}
+.button:hover {
+  background-color: royalblue !important;
+  transition: 800ms;
+}

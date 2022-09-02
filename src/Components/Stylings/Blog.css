@@ -1,0 +1,17 @@
+.blog__container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+img,
+svg {
+  vertical-align: middle;
+  width: 100%;
+}
+.col {
+  margin-bottom: 80px;
+}
+.col__cont {
+  width: 95%;
+}
