@@ -8,7 +8,7 @@ const SingleItem = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   useEffect(() => {
-    const url = `http://localhost:1010/product/${id}`;
+    const url = `https://nameless-beyond-44550.herokuapp.com/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
