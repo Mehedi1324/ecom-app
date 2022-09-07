@@ -14,6 +14,7 @@ import {
 } from 'firebase/auth';
 import { useRef, useState } from 'react';
 import { useEffect } from 'react';
+import { ResetTv } from '@mui/icons-material';
 FirebaseInitialize();
 const useFirebase = () => {
   const auth = getAuth();
@@ -88,14 +89,16 @@ const useFirebase = () => {
     )
       .then((result) => {
         const signedUpUser = result.user;
-        setUser(signedUpUser);
-        displayName();
-        setError('');
         emailVerification();
+        displayName();
+        setUser(signedUpUser);
+        setError('');
+        alert('Successfully Registered');
       })
       .catch((error) => {
         setError(error.message);
       });
+    e.target.reset();
   };
 
   // Login With email and password __________________________________________________
@@ -111,18 +114,19 @@ const useFirebase = () => {
         const signInInfo = result.user;
         setUser(signInInfo);
         setError('');
+        alert('successfully loged in');
       })
       .catch((error) => {
         setError(error.message);
       });
+    e.target.reset();
   };
 
   // Verify Account  ________________________________________________________________
 
   const emailVerification = () => {
-    sendEmailVerification(auth, emailRef.current.value).then((result) => {
-      // Email verification sent!
-      // ...
+    sendEmailVerification(auth.currentUser).then((result) => {
+      alert('check your email to verify');
     });
   };
 

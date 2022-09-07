@@ -23,14 +23,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/cart" element={<Cart />} />
-          {/* <Route
+          <Route
             path="/orders"
             element={
               <PrivateRoute>
                 <OrderNow />
               </PrivateRoute>
             }
-          /> */}
+          />
 
           <Route path="/orders" element={<OrderNow />} />
           <Route path="/login" element={<Login />} />

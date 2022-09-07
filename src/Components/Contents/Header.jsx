@@ -5,9 +5,7 @@ import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import {
   FaEnvelope,
-  FaMinus,
   FaPhoneAlt,
-  FaPlus,
   FaSearch,
   FaShoppingCart,
   FaSignInAlt,
@@ -17,7 +15,6 @@ import {
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../Share_Comp/Hooks/AuthProvider';
-import { MdDelete } from 'react-icons/md';
 
 const Header = () => {
   const cartState = useSelector((state) => state.cartReducer);
@@ -61,9 +58,6 @@ const Header = () => {
   window.addEventListener('scroll', stickyNav);
   // Mini card function_______
   const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   return (
     <div className="nav__bar">
@@ -135,20 +129,20 @@ const Header = () => {
                   <div className="links">
                     <ul className="nav__list">
                       <li>
-                        <a href="/contact">Contact Us</a>
+                        <Link to="/contact">Contact Us</Link>
                       </li>
                       <br />
 
                       <li>
                         {' '}
-                        <a href="/orders">Order Now</a>
+                        <Link to="/orders">Order Now</Link>
                       </li>
                       <br />
                       <li>
                         {!user.email ? (
-                          <a href="/login">
+                          <Link to="/login">
                             Sign In <FaSignInAlt />
-                          </a>
+                          </Link>
                         ) : (
                           <Button
                             className="outlet_btn"

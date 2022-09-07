@@ -14,7 +14,10 @@ const Banner = () => {
           </span>{' '}
           <br />
           <div data-aos="fade-up-right">
-            <button className="button_exs my-4 ">Shop now</button>
+            <a href="#latest">
+              {' '}
+              <button className="button_exs my-4 ">Shop now</button>
+            </a>
           </div>
         </div>
       </div>

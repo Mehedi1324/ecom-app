@@ -13,7 +13,7 @@ const LatestCollections = () => {
   }, []);
 
   return (
-    <div className="collection__container">
+    <div className="collection__container" id="latest">
       <div>
         <div className="title" data-aos="fade-down">
           <span></span>
