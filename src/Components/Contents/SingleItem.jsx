@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { FaMinus, FaPlus } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { addToCart } from '../../action/cartAction';
 import '../Stylings/SingleItem.css';
 import Supports from './Supports';
 const SingleItem = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
   useEffect(() => {
-    const url = `https://nameless-beyond-44550.herokuapp.com/${id}`;
+    const url = `https://nameless-beyond-44550.herokuapp.com/product/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
-  console.log(product);
+  const handleAddToCart = () => {
+    dispatch(addToCart(product, quantity));
+  };
+
   return (
     <>
       <div className="add__banner">
@@ -55,12 +62,20 @@ const SingleItem = () => {
             </span>
             <p>Quantity:</p>
             <div className="quantity">
-              <FaMinus />
-              <p>1</p>
-              <FaPlus />
+              <FaMinus
+                onClick={() => dispatch(product, setQuantity(quantity - 1))}
+              />
+              <p>{quantity}</p>
+              <FaPlus
+                onClick={() => dispatch(product, setQuantity(quantity + 1))}
+              />
             </div>
             <div className="card__btn">
-              <input type="submit" value="Add to cart" />
+              <input
+                onClick={handleAddToCart}
+                type="submit"
+                value="Add to cart"
+              />
               <Link to="/order">
                 <input type="submit" value="Check Order" />
               </Link>

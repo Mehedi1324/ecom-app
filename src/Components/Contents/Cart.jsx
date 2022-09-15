@@ -22,25 +22,16 @@ const Cart = () => {
       </div>
       <div className="container ">
         <Row>
-          <Col
-            data-aos="fade-right"
-            data-aos-delay="100"
-            lg={8}
-            md={12}
-            sm={12}
-            className="product__col"
-          >
+          <Col lg={8} md={12} sm={12} className="product__col">
             <h2>Products</h2>
             <p className="pro__margin"></p>
 
-            <Scrollbars style={{ height: 600 }} className="scroll">
-              <CardProduct />
-            </Scrollbars>
+            <CardProduct />
           </Col>
 
           {/* Total Costs */}
 
-          <Col lg={4} md={12} sm={12} data-aos="fade-left" data-aos-delay="100">
+          <Col lg={4} md={12} sm={12}>
             <div className="costs">
               <h2>Total Cost</h2>
               <p className="pro__margin"></p>

@@ -10,7 +10,7 @@ const OrderNow = () => {
     0
   );
   const totalProduct = cartItems.reduce((x, item) => x + item.quantity, 0);
-  console.log(totalProduct);
+
   const vat = parseFloat((subTotal * 0.1).toFixed(2));
   const finalCost = subTotal + vat;
   return (

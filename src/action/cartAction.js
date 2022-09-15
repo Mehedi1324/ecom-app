@@ -1,7 +1,8 @@
 export const addToCart = (product, quantity) => (dispatch, getState) => {
   var ecomCartItems = {
+    _id: product._id,
     name: product.name,
-    image: product.img,
+    img: product.img,
     price: product.price,
     rating: product.rating,
     quantity: Number(quantity),
