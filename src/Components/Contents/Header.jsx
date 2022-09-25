@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Stylings/Header.css';
-import { Row, Col, Button, Offcanvas } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import {
@@ -56,8 +56,6 @@ const Header = () => {
     }
   };
   window.addEventListener('scroll', stickyNav);
-  // Mini card function_______
-  const [show, setShow] = useState(false);
 
   return (
     <div className="nav__bar">
@@ -94,10 +92,10 @@ const Header = () => {
               <img src="./image/Logo3.png" alt="logo" />
             </div>
           </Link>
-          <div className="d-flex search">
+          {/* <div className="d-flex search">
             <input className="search__box" />
             <FaSearch className="search__icon" />
-          </div>
+          </div> */}
 
           {/* Dropdown menu section */}
 

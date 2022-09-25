@@ -30,3 +30,11 @@ export const deleteFromCart = (product) => (dispatch, getState) => {
     JSON.stringify(getState().cartReducer.ecomCartItems)
   );
 };
+
+export const removeAllItems = () => (dispatch, getState) => {
+  dispatch({ type: 'REMOVE_ALL' });
+  localStorage.setItem(
+    'ecomCartItems',
+    JSON.stringify(getState().cartReducer.ecomCartItems)
+  );
+};

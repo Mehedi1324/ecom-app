@@ -24,6 +24,11 @@ export const cartReducer = (state = { ecomCartItems: [] }, action) => {
           (item) => item._id !== action.payload._id
         ),
       };
+    case 'REMOVE_ALL':
+      return {
+        ...state,
+        ecomCartItems: [],
+      };
 
     default:
       return state;

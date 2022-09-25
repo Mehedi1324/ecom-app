@@ -5,6 +5,7 @@
   height: 147px;
   background-blend-mode: darken;
   color: white;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;

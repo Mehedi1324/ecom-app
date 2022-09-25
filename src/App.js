@@ -13,6 +13,7 @@ import PrivateRoute from './Share_Comp/Hooks/PrivateRoute';
 import SingleItem from './Components/Contents/SingleItem';
 import Error from './Components/Contents/Error';
 import Contact from './Components/Contents/Contact';
+import Success from './Components/Contents/Success';
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
           <Route
             path="/orders"
             element={
-              <PrivateRoute>
-                <OrderNow />
-              </PrivateRoute>
+              // <PrivateRoute>
+              <OrderNow />
+              // </PrivateRoute>
             }
           />
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/product/:id" element={<SingleItem />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/success" element={<Success />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Subscription />
