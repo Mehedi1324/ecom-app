@@ -7,7 +7,7 @@ import MostSelling from './MostSelling';
 const TopSellings = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('https://nameless-beyond-44550.herokuapp.com/most_selling')
+    fetch('https://m-shop.vercel.app/most_selling')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

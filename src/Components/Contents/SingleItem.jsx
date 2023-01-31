@@ -12,7 +12,7 @@ const SingleItem = () => {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
   useEffect(() => {
-    const url = `https://nameless-beyond-44550.herokuapp.com/product/${id}`;
+    const url = `https://m-shop.vercel.app/product/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));

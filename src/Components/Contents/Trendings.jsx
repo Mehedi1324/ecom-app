@@ -9,12 +9,12 @@ const Trendings = () => {
   const [topTrending, setTopTrending] = useState([]);
   const [topSelling, setTopSelling] = useState([]);
   useEffect(() => {
-    fetch('https://nameless-beyond-44550.herokuapp.com/trending')
+    fetch('https://m-shop.vercel.app/trending')
       .then((res) => res.json())
       .then((data) => setTopTrending(data));
   }, []);
   useEffect(() => {
-    fetch('https://nameless-beyond-44550.herokuapp.com/top_selling')
+    fetch('https://m-shop.vercel.app/top_selling')
       .then((res) => res.json())
       .then((data) => setTopSelling(data));
   }, []);
