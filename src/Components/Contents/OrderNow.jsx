@@ -49,7 +49,7 @@ const OrderNow = () => {
     };
     const addData = [result, ...cartItems];
 
-    fetch('http://localhost:1010/buyerInfo', {
+    fetch('m-shop.vercel.app/buyerInfo', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

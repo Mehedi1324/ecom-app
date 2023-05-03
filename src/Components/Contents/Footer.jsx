@@ -31,20 +31,20 @@ const Footer = () => {
                     </div>{' '}
                     <span className="add_dit1">
                       {' '}
-                      184 Main Rd E, St Albans VIC 3021, Australia
+                      Bogura Sadar, Bogura, Bangladesh
                     </span>
                   </div>
                   <div className="address d-flex">
                     <div>
                       <FaEnvelope className="add__svg" />
                     </div>{' '}
-                    <span className="add_dit1"> contact@company.com</span>
+                    <span className="add_dit1"> 52mehedi.hasan@gmail.com</span>
                   </div>
                   <div className="address d-flex">
                     <div>
                       <FaPhoneAlt className="add__svg" />
                     </div>{' '}
-                    <span className="add_dit1"> +001 2233 456</span>
+                    <span className="add_dit1">+880177452......</span>
                   </div>
                 </div>
               </div>
@@ -118,7 +118,7 @@ const Footer = () => {
       <div className="bottom">
         <div className="bottom__elements">
           <div>
-            <p>Copyright © 2022 M-Shop . Developer Hasan</p>
+            <p>Copyright © 2022 M-Shop . Developer Mehedi Hasan</p>
           </div>
           <div className="social__icons d-flex ">
             <FaTwitter />

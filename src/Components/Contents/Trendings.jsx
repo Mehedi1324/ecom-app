@@ -9,12 +9,12 @@ const Trendings = () => {
   const [topTrending, setTopTrending] = useState([]);
   const [topSelling, setTopSelling] = useState([]);
   useEffect(() => {
-    fetch('https://m-shop.vercel.app/trending')
+    fetch('https://m-shop-backend.vercel.app/trending')
       .then((res) => res.json())
       .then((data) => setTopTrending(data));
   }, []);
   useEffect(() => {
-    fetch('https://m-shop.vercel.app/top_selling')
+    fetch('https://m-shop-backend.vercel.app/top_sellings')
       .then((res) => res.json())
       .then((data) => setTopSelling(data));
   }, []);

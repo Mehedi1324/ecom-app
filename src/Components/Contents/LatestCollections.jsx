@@ -7,7 +7,7 @@ import Product from './Product';
 const LatestCollections = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('https://m-shop.vercel.app/latest_collections')
+    fetch('https://m-shop-backend.vercel.app/latest_collections')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
