@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../action/cartAction';
 const Tt = (props) => {
-  console.log(props.product);
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
   const { img, name, price } = props.product;

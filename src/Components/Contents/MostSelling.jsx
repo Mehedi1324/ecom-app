@@ -19,7 +19,7 @@ const MostSelling = (props) => {
 
         <div className="product__content">
           <div className="hidden__btn">
-            <Link to={`product/${props.product._id}`}>
+            <Link to={`/product/${props.product._id}`}>
               <button className="hov__icon">View Product</button>
             </Link>
 

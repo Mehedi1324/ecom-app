@@ -8,7 +8,7 @@ const CardProduct = () => {
   const cartState = useSelector((state) => state.cartReducer);
   const cartItems = cartState.ecomCartItems;
   const dispatch = useDispatch();
-  console.log(cartItems);
+
   return (
     <>
       {cartItems.map((item) => (
